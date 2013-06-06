@@ -1,0 +1,48 @@
+﻿<div class="headerTab">
+    <div>
+        <span data-bind="text: customer.targetLevel"></span>: <span data-bind="text: customer.userName">
+        </span>
+    </div>
+</div>
+<table class="customerInfo-table">
+    <tr>
+        <td class="customerInfoBlock1">
+            {static:Resources.Lang.firstname}
+        </td>
+        <td class="customerInfoBlock2">
+            <span data-bind="text: customer.firstName"></span>
+        </td>
+        <td class="customerInfoBlock3">
+            {static:Resources.Lang.lblPhone}
+        </td>
+        <td class="customerInfoBlock4">
+            <span data-bind="text: customer.phone"></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="customerInfoBlock1">
+            {static:Resources.Lang.lastname}
+        </td>
+        <td class="customerInfoBlock2">
+            <span data-bind="text: customer.lastName"></span>
+        </td>
+        <td class="customerInfoBlock3">
+            {static:Resources.Lang.lblMobilePhone}
+        </td>
+        <td class="customerInfoBlock4">
+            <span data-bind="text: customer.mobilePhone"></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="customerInfoBlock1">
+            {static:Resources.Lang.lblFax}
+        </td>
+        <td class="customerInfoBlock2">
+            <span data-bind="text: customer.fax"></span>
+        </td>
+        <td class="customerInfoBlock3">
+        </td>
+        <td class="customerInfoBlock4">
+        </td>
+    </tr>
+</table>

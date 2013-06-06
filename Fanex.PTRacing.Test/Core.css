@@ -1,0 +1,17 @@
+﻿.clearBlock
+{
+	clear: both;
+}
+.headerPositionTaking {
+min-width: 700px;
+width: 700px;
+font-weight: bold;
+font-size: 11px;
+background: url("../../_GlobalResources/Images/bg_header02.jpg") repeat-x scroll center top #8C897E;
+clear: both;
+color: #FFFFFF;
+font-size: 12px;
+height: 22px;
+text-align: center;
+text-indent: 5px;
+}

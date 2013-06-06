@@ -1,0 +1,721 @@
+﻿.bettingBox, .bettingBox2, .bettingBox3, .bettingBox4, .bettingBox5
+{
+	float: left;
+	border-bottom: 1px solid #7C98A4;
+	border-right: 1px solid #7C98A4;
+}
+.bettingBox
+{
+	width: 1008px;
+}
+.bettingBox2
+{
+	width: 809px;
+}
+.bettingBox3
+{
+	width: 738px;
+}
+.bettingBox4
+{
+	width: 1008px;
+}
+.bettingBox5
+{
+	width: 728px;
+}
+.headerBetSettingCrossLevelBox, .headerStatusBoxForMember
+{
+	float: left;
+}
+.bettingBox-header-commbox
+{
+	float: left;
+	width: 213px;
+}
+.bettingBox-header-commbox2
+{
+	float: left;
+	width: 142px;
+}
+.headerBetSettingCrossLevelBox
+{
+	float: left;
+	width: 303px;
+}
+.headerBetSettingBox
+{
+	float: left;
+	width: 573px;
+}
+.headerStatusBox
+{
+	float: left;
+	width: 142px;
+}
+.betSettingCommDropdown
+{
+	margin: 3px 2px;
+	width: 65px;
+}
+.bettingBox-header-sport
+{
+	background-color: #B5C4D0;
+	float: left;
+	text-align: center;
+	height: 49px;
+	line-height: 49px;
+	width: 90px;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-header-tote
+{
+	background-color: #B5C4D0;
+	float: left;
+	height: 49px;
+	line-height: 49px;
+	text-align: center;
+	width: 120px;
+	border-left: 1px solid transparent;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-header-bsbox, .bettingBox-header-bsbox2
+{
+	background-color: #B5C4D0;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	float: left;
+	font-weight: bold;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-header-bsbox
+{
+	width: 572px;
+}
+.bettingBox-header-bsbox2
+{
+	width: 302px;
+}
+.bettingBox-header-minbet, .bettingBox-header-maxbet, .bettingBox-header-maxpermatch
+{
+	background-color: #B5C4D0;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	float: left;
+	width: 190px;
+	font-weight: bold;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-header-minbet2, .bettingBox-header-maxbet2, .bettingBox-header-maxpermatch2
+{
+	background-color: #B5C4D0;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	float: left;
+	width: 100px;
+	font-weight: bold;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-header-comm, .bettingBox-header-comm2, .bettingBox-header-comm3, .bettingBox-header-comm4
+{
+	background-color: #B5C4D0;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-header-comm
+{
+	width: 80px;
+	height: 49px;
+	line-height: 49px;
+}
+.bettingBox-header-comm4
+{
+	width: 70px;
+	height: 49px;
+	line-height: 49px;
+}
+.bettingBox-header-comm2
+{
+	width: 141px;
+	height: 24px;
+	line-height: 24px;
+}
+.bettingBox-header-comm3
+{
+	width: 212px;
+	height: 24px;
+	line-height: 24px;
+}
+.bettingBox-header-status, .bettingBox-header-status2
+{
+	background-color: #B5C4D0;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-header-status
+{
+	width: 141px;
+	height: 24px;
+	line-height: 24px;
+}
+.bettingBox-header-status2
+{
+	width: 80px;
+	height: 49px;
+	line-height: 49px;
+}
+.bettingBox-header-roletitle, .bettingBox-header-downlines
+{
+	background-color: #B5C4D0;
+	height: 24px;
+	line-height: 24px;
+	float: left;
+	width: 70px;
+	text-align: center;
+	font-weight: bold;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-row, .bettingBox-sportbox
+{
+}
+.bettingBox-sport
+{
+	text-indent: 2px;
+	background-color: #B5C4D0;
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	width: 90px;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-tote
+{
+	text-indent: 2px;
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	width: 120px;
+	background-color: #CADCEB;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-minbet, .bettingBox-maxbet, .bettingBox-maxpermatch
+{
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	width: 190px;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+}
+.bettingBox-minbet2, .bettingBox-maxbet2, .bettingBox-maxpermatch2
+{
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	width: 100px;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+	text-align: center;
+}
+.bettingBox-comm, .bettingBox-comm2
+{
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+	text-align: center;
+}
+.bettingBox-comm
+{
+	width: 80px;
+}
+.bettingBox-comm2
+{
+	width: 70px;
+}
+.bettingBox-roletitle, .bettingBox-downlines
+{
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	width: 70px;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+	text-align: center;
+}
+.bettingBox-status, .bettingBox-status2
+{
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	width: 80px;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+	text-align: center;
+}
+.bettingBox-status
+{
+	width: 70px;
+}
+.bettingBox-status2
+{
+	width: 80px;
+}
+body
+{
+	font-family: Tahoma,Arial,helvetica,sans-serif;
+	font-size: 11px;
+}
+
+select, input
+{
+	height: 18px;
+	line-height: 18px;
+	padding: 0px;
+	font-size: 11px;
+	margin: 2px;
+	vertical-align: middle;
+}
+
+.PTSportCopied
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.copyUnChecked.png") %>') no-repeat right top;
+	cursor: pointer;
+	float: right;
+	height: 20px;
+	line-height: 20px;
+	margin: 2px 2px 0 0;
+	padding: 0;
+	width: 30px;
+}
+
+.PTSportEdit
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.edit.png") %>') no-repeat right top;
+	cursor: pointer;
+	float: right;
+	height: 20px;
+	line-height: 20px;
+	margin: 2px 2px 0 0;
+	padding: 0;
+	width: 30px;
+}
+
+.PTSportEditCopied
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.copy.png") %>') no-repeat right top;
+	cursor: pointer;
+	float: right;
+	height: 20px;
+	line-height: 20px;
+	margin: 2px 2px 0 0;
+	padding: 0;
+	width: 30px;
+}
+
+.PTSportCopiedActive
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.copyChecked.png") %>') no-repeat right top;
+	cursor: pointer;
+	float: right;
+	height: 20px;
+	line-height: 20px;
+	margin: 2px 2px 0 0;
+	padding: 0;
+	width: 30px;
+}
+
+.PTSportCopiedInactive
+{
+	cursor: default;
+	float: right;
+	height: 20px;
+	line-height: 20px;
+	margin: 2px 2px 0 0;
+	padding: 0;
+	width: 30px;
+	visibility: hidden;
+}
+
+.BetTypeHeaderActive
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.copyChecked.png") %>') no-repeat right top;
+	background-position: 120px 4px;
+	border-left: 1px solid #12A3EB;
+	border-top: 1px solid #12A3EB;
+	cursor: pointer;
+	height: 22px;
+	line-height: 22px;
+	margin: 0;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+/* The hint to Hide and Show */
+.hint
+{
+	display: none;
+	position: absolute;
+	min-width: 150px;
+	margin-top: -4px;
+	border: 1px solid #c93;
+	padding: 10px 12px;
+	background: #ffc;
+}
+
+/* The pointer image is hadded by using another span */
+.hint .hint-pointer
+{
+	position: absolute;
+	left: 10px;
+	top: 38px;
+	width: 20px;
+	height: 19px;
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.pointer.png") %>') left top no-repeat;
+}
+/* The pointer image is hadded by using another span */
+.hint .hint-pointer-right
+{
+	position: absolute;
+	left: 10px;
+	top: 38px;
+	width: 20px;
+	height: 19px;
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.pointerRight.png") %>') left top no-repeat;
+}
+
+.hint-pointerDown
+{
+	position: absolute;
+	left: 10px;
+	top: 38px;
+	width: 20px;
+	height: 19px;
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.pointerDown.png") %>') left top no-repeat;
+}
+
+.hint ul
+{
+	margin: 5px 0px 0px 25px;
+	padding: 0px;
+}
+
+.hint li
+{
+	line-height: 18px;
+}
+
+.closePopup
+{
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	right: 4px;
+	top: 5px;
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.close.jpg") %>') left top no-repeat;
+	cursor: pointer;
+}
+
+.inputWidth100
+{
+	width: 100px;
+}
+.inputNumberWidth90
+{
+	text-align: right;
+	vertical-align: middle;
+	width: 90px;
+	float: left;
+	margin: 1px 2px;
+}
+.PTSelect
+{
+	width: 52px;
+}
+
+.bettingCommSportCopied, .bettingCommSportCopiedActive, .bettingCommSportEdit, .bettingCommSportActive
+{
+	cursor: pointer;
+	float: right;
+	height: 20px;
+	line-height: 20px;
+	margin: 2px 2px 0 0;
+	padding: 0;
+	width: 20px;
+	border: none;
+}
+.bettingCommSportCopied
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.copyUnChecked.png") %>') no-repeat right top;
+}
+.bettingCommSportCopiedActive
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.copyChecked.png") %>') no-repeat right top;
+}
+.bettingCommSportEdit, .bettingCommSportActive
+{
+	top: 1px;
+	right: -1px;
+}
+.bettingCommSportEdit
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.edit.png") %>') no-repeat right top;
+}
+.bettingCommSportActive
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.copy.png") %>') no-repeat right top;
+}
+.hidden
+{
+	display: none;
+}
+
+PTGrid
+{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 0;
+	border-style: none;
+	box-sizing: border-box;
+	cursor: default;
+	font-family: Tahoma,Arial,helvetica,sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	margin: 0;
+	min-width: 800px;
+	padding: 0;
+}
+
+
+.PTGroups
+{
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+.PTGroup
+{
+	clear: both;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.ToteLabel4
+{
+	width: 100px;
+	float: left;
+	height: 107px;
+	line-height: 107px;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+	padding-left: 4px;
+}
+.PTBox
+{
+	float: left;
+	width: 480px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.BetTypeLabel
+{
+	height: 22px;
+	line-height: 22px;
+	float: left;
+	width: 100px;
+	background-color: #CADCEB;
+	border-top: 1px solid #7C98A4;
+	border-left: 1px solid #7C98A4;
+	padding: 2px;
+}
+
+
+
+.PTLabel
+{
+	float: left;
+	width: 120px;
+	border-top: 1px solid #7C98A4;
+	border-left: 1px solid #7C98A4;
+	height: 22px;
+	line-height: 22px;
+	padding: 2px;
+	font-weight: bold;
+}
+.BetTypeHeader
+{
+	float: left;
+}
+.BetTypeSelect
+{
+	float: left;
+	width: 120px;
+	border-top: 1px solid #7C98A4;
+	border-left: 1px solid #7C98A4;
+	height: 22px;
+	line-height: 22px;
+	padding: 2px;
+}
+.BetTypeSelect2
+{
+	float: left;
+	width: 370px;
+	border-top: 1px solid #7C98A4;
+	border-left: 1px solid #7C98A4;
+	height: 22px;
+	line-height: 22px;
+	padding: 2px;
+	text-align: left;
+	font-weight: bold;
+}
+.PTSport
+{
+	background-color: #B5C4D0;
+	border-bottom: 1px solid #7C98A4;
+	border-right: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+	float: left;
+	margin: 0 0 10px;
+	padding: 0;
+	min-width: 150px;
+}
+.PTSportLabel
+{
+	clear: both;
+	cursor: pointer;
+	float: left;
+	font-weight: 700;
+	height: 22px;
+	line-height: 22px;
+	text-indent: 5px;
+	border-left: 1px solid #7C98A4;
+}
+.PTLineBox
+{
+	float: left;
+	background-color: white;
+}
+.BetTypeHeader2
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.copyUnChecked.png") %>') no-repeat right top #CADCEB;
+	float: left;
+	width: 100px;
+	background-position: 120px 4px;
+	border-top: 1px solid #7C98A4;
+	border-left: 1px solid #7C98A4;
+	cursor: pointer;
+	height: 22px;
+	line-height: 22px;
+	margin: 0;
+	padding: 2px;
+	vertical-align: middle;
+}
+.BetTypeHeader
+{
+	background-color: #CADCEB;
+	border-top: 1px solid #7C98A4;
+	border-left: 1px solid #7C98A4;
+	height: 22px;
+	line-height: 22px;
+	width: 100px;
+	padding: 2px;
+}
+.BetTypeCheckbox
+{
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.PTBetTypeCopied
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.copyUnChecked.png") %>') no-repeat right top;
+	width: 20px;
+	height: 20px;
+	float: right;
+	margin-right: 5px;
+}
+.PTBetTypeCopiedActive
+{
+	background: url('<% =WebResource("Fanex.PTRacing.UI.Images.copyChecked.png") %>') no-repeat right top;
+	width: 20px;
+	height: 20px;
+	float: right;
+	margin-right: 5px;
+}
+.PTCheckCopied
+{
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	visibility: hidden;
+	width: 1px;
+}
+.ToteLabel3
+{
+	width: 100px;
+	float: left;
+	height: 80px;
+	line-height: 80px;
+	border-left: 1px solid #7C98A4;
+	border-top: 1px solid #7C98A4;
+	padding-left: 4px;
+}
+.PTSuperBox, .PTAgentBox
+{
+	background-color: White;
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.PTSuperBox
+{
+	width: 605px;
+}
+.PTAgentDisableAutMPTBox
+{
+	width: 355px;
+}
+.housePtSelect
+{
+	left: 37px;
+	position: absolute;
+	top: 18px;
+}
+.BetTypeInactive
+{
+	background-color: #DDD !important;
+	cursor: default;
+}
+.BetTypeHeaderSpan
+{
+	float: right;
+}
+.PTMemberBox
+{
+	background-color: White;
+	float: left;
+	width: 230px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}

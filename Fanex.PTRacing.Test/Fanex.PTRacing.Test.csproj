@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A34AB091-54DB-400C-B4D4-8F97A5C9055E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fanex.PTRacing.Test</RootNamespace>
+    <AssemblyName>Fanex.PTRacing.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fanex.Age.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Fanex.Age.UI.Components, Version=1.0.4673.20102, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sunplus.Agent.Model, Version=1.0.4818.24042, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="TplCore, Version=1.0.4694.29951, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EditMultiple.css" />
+    <Content Include="EditMultiple.js" />
+    <Content Include="EditMultiple.aspx" />
+    <Content Include="Core.js" />
+    <Content Include="Data.js" />
+    <Content Include="Dependencies\Fanex.Age.UI.Components.dll" />
+    <Content Include="Dependencies\Fanex.Age.UI.dll" />
+    <Content Include="Dependencies\Sunplus.Agent.Model.dll" />
+    <Content Include="Dependencies\TplCore.dll" />
+    <Content Include="EditSingle.aspx" />
+    <Content Include="Core.css" />
+    <Content Include="EditSingle.js" />
+    <Content Include="ErrorMsg\ErrorMsg.css" />
+    <Content Include="ErrorMsg\ErrorMsg.js" />
+    <Content Include="ErrorMsg\Images\cross.png" />
+    <Content Include="ErrorMsg\Images\emsg_1_1.gif" />
+    <Content Include="ErrorMsg\Images\emsg_1_2.gif" />
+    <Content Include="ErrorMsg\Images\emsg_1_3.gif" />
+    <Content Include="ErrorMsg\Images\emsg_2_1.gif" />
+    <Content Include="ErrorMsg\Images\emsg_2_2.gif" />
+    <Content Include="ErrorMsg\Images\emsg_3_1.gif" />
+    <Content Include="ErrorMsg\Images\emsg_3_2.gif" />
+    <Content Include="ErrorMsg\Images\emsg_3_3.gif" />
+    <Content Include="ErrorMsg\Images\error-icon.gif" />
+    <Content Include="ErrorMsg\Images\infoMsg.gif" />
+    <Content Include="ErrorMsg\Images\Success.gif" />
+    <Content Include="ErrorMsg\Images\succ_1_1.gif" />
+    <Content Include="ErrorMsg\Images\succ_1_2.gif" />
+    <Content Include="ErrorMsg\Images\succ_1_3.gif" />
+    <Content Include="ErrorMsg\Images\succ_2_1.gif" />
+    <Content Include="ErrorMsg\Images\succ_2_2.gif" />
+    <Content Include="ErrorMsg\Images\succ_3_1.gif" />
+    <Content Include="ErrorMsg\Images\succ_3_2.gif" />
+    <Content Include="ErrorMsg\Images\succ_3_3.gif" />
+    <Content Include="ErrorMsg\Images\tick.png" />
+    <Content Include="ErrorMsg\Images\titleHeader.jpg" />
+    <Content Include="ErrorMsg\Images\warning.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EditMultiple.aspx.cs">
+      <DependentUpon>EditMultiple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditMultiple.aspx.designer.cs">
+      <DependentUpon>EditMultiple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditSingle.aspx.cs">
+      <DependentUpon>EditSingle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditSingle.aspx.designer.cs">
+      <DependentUpon>EditSingle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fanex.PTRacing\Fanex.PTRacing.csproj">
+      <Project>{C5A23ED4-C18F-4505-A2D8-5ACEDB379F9F}</Project>
+      <Name>Fanex.PTRacing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Lang.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Lang1.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52888</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.PTRacing.Test", "Fanex.PTRacing.Test.csproj", "{A34AB091-54DB-400C-B4D4-8F97A5C9055E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.PTRacing", "..\Fanex.PTRacing\Fanex.PTRacing.csproj", "{C5A23ED4-C18F-4505-A2D8-5ACEDB379F9F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.18.200.210:8080/
+		SccProjectUniqueName0 = ..\\Fanex.PTRacing\\Fanex.PTRacing.csproj
+		SccProjectName0 = ../Fanex.PTRacing
+		SccLocalPath0 = ..\\Fanex.PTRacing
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = Fanex.PTRacing.Test.csproj
+		SccLocalPath2 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A34AB091-54DB-400C-B4D4-8F97A5C9055E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A34AB091-54DB-400C-B4D4-8F97A5C9055E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A34AB091-54DB-400C-B4D4-8F97A5C9055E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A34AB091-54DB-400C-B4D4-8F97A5C9055E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A23ED4-C18F-4505-A2D8-5ACEDB379F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A23ED4-C18F-4505-A2D8-5ACEDB379F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A23ED4-C18F-4505-A2D8-5ACEDB379F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A23ED4-C18F-4505-A2D8-5ACEDB379F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
