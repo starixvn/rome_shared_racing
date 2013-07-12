@@ -183,6 +183,8 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
 
         /*comm*/
         /*region edit comm button*/
+        var divCommButtonBox = document.createElement("DIV");
+        divCommButtonBox.className = 'divCommButtonBox';
         var buttonEditComm = document.createElement("INPUT");
         buttonEditComm.type = "button";
         buttonEditComm.title = Language.EDIT;
@@ -207,10 +209,16 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
             var commHeaderBox = document.createElement("DIV");
             commHeaderBox.className = "bettingBox-header-commbox2";
             var commHeaderMergeBox = document.createElement("DIV");
-            commHeaderMergeBox.innerHTML = Language.COMMISSION;
+            var divCommHeaderTitle = document.createElement("DIV");
+            divCommHeaderTitle.className = 'float-left divCommButtonTile text-align-right';
+            divCommHeaderTitle.innerHTML = Language.COMMISSION;
+            divCommHeaderTitle.style.width = '100px';
+            commHeaderMergeBox.appendChild(divCommHeaderTitle);
             commHeaderMergeBox.id = "commheader";
             commHeaderMergeBox.className = "bettingBox-header-comm2";
-            commHeaderMergeBox.appendChild(buttonEditComm);
+            divCommButtonBox.appendChild(buttonEditComm);
+            commHeaderMergeBox.appendChild(divCommButtonBox);
+            divCommButtonBox.style.top = '0px';
             commHeaderBox.appendChild(commHeaderMergeBox);
 
             var commHeaderTitleBox = document.createElement("DIV");
@@ -228,7 +236,10 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
         }
         else {
             var commHeader = document.createElement("DIV");
-            commHeader.innerHTML = Language.COMMISSION;
+            var divCommHeaderTitle = document.createElement("DIV");
+            divCommHeaderTitle.className = 'float-left divCommButtonTile';
+            divCommHeaderTitle.innerHTML = Language.COMMISSION;
+            commHeader.appendChild(divCommHeaderTitle);
             commHeader.id = "commheader";
             if (targetRoleId == 2 && roleId == 4) {
                 commHeader.className = "bettingBox-header-comm4";
@@ -236,8 +247,8 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
             else {
                 commHeader.className = "bettingBox-header-comm";
             }
-            buttonEditComm.style.marginTop = "14px";
-            commHeader.appendChild(buttonEditComm);
+            divCommButtonBox.appendChild(buttonEditComm);
+            commHeader.appendChild(divCommButtonBox);
 
             box.appendChild(commHeader);
         }
@@ -245,6 +256,9 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
 
         /*satus*/
         /*region edit status button*/
+        var divEditStatusButtonBox = document.createElement("DIV");
+        divEditStatusButtonBox.className = 'divBettingCommSportCopy';
+
         var buttonEditStatus = document.createElement("INPUT");
         buttonEditStatus.type = "button";
         buttonEditStatus.title = Language.EDIT;
@@ -268,10 +282,15 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
             var statusHeaderBox = document.createElement("DIV");
             statusHeaderBox.className = "headerStatusBox";
             var statusHeaderMergeBox = document.createElement("DIV");
-            statusHeaderMergeBox.innerHTML = Language.STATUS;
+            var statusHeaderMergeTitleBox = document.createElement("DIV");
+            statusHeaderMergeTitleBox.innerHTML = Language.STATUS;
+            statusHeaderMergeTitleBox.className = 'float-left text-align-right';
+            statusHeaderMergeTitleBox.style.width = '88px';
             statusHeaderMergeBox.id = "statusheader";
             statusHeaderMergeBox.className = "bettingBox-header-status";
-            statusHeaderMergeBox.appendChild(buttonEditStatus);
+            statusHeaderMergeBox.appendChild(statusHeaderMergeTitleBox);
+            divEditStatusButtonBox.appendChild(buttonEditStatus);
+            statusHeaderMergeBox.appendChild(divEditStatusButtonBox);
             statusHeaderBox.appendChild(statusHeaderMergeBox);
 
             var statusHeaderTitleBox = document.createElement("DIV");
@@ -291,10 +310,16 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
             var statusHeaderBox = document.createElement("DIV");
             statusHeaderBox.className = "headerStatusBoxForMember";
             var statusHeaderMergeBox = document.createElement("DIV");
-            statusHeaderMergeBox.innerHTML = Language.STATUS;
+            var statusHeaderMergeTitleBox = document.createElement("DIV");
+            statusHeaderMergeTitleBox.innerHTML = Language.STATUS;
+            statusHeaderMergeTitleBox.className = 'float-left text-align-right';
+            statusHeaderMergeTitleBox.style.width = '58px';
+            statusHeaderMergeBox.appendChild(statusHeaderMergeTitleBox);
             statusHeaderMergeBox.id = "statusheader";
             statusHeaderMergeBox.className = "bettingBox-header-status2";
-            statusHeaderMergeBox.appendChild(buttonEditStatus);
+            divEditStatusButtonBox.appendChild(buttonEditStatus);
+            divEditStatusButtonBox.style.top = '12px';
+            statusHeaderMergeBox.appendChild(divEditStatusButtonBox);
             statusHeaderBox.appendChild(statusHeaderMergeBox);
 
             box.appendChild(statusHeaderBox);
@@ -318,6 +343,8 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
             sportBox.appendChild(sportHeader);
 
             var bettypeGroupBox = document.createElement("DIV");
+            var ieMode = this.checkIEModeVersion();
+            bettypeGroupBox.className = (ieMode && ieMode < 7) ? 'float-left' : '';
             for (var j = 0; j < totalBettypeGroups; j++) {
                 var bettypeGroup = bettypeGroups[j];
                 if (bettypeGroup.isHide) {
@@ -327,7 +354,7 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                 var item = bettypeGroup.bettingCommSetting;
                 item.name = sportInfo.name + ' ' + bettypeGroup.name;
                 var box2 = document.createElement("DIV");
-                box2.className = "bettingBox-row";
+                box2.className = "bettingBox-row float-left";
                 if (typeof (item.minBet) == 'undefined') { // For Add new case
                     item.minBet = 0; //item.minBetMax;
                 }
@@ -343,12 +370,19 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                 var betSettingCopyComm = "betSettingCopyComm ";
 
                 var header = document.createElement("DIV");
-                header.innerHTML = bettypeGroup.name;
-                header.title = bettypeGroup.title;
+                var divHeader = document.createElement("DIV");
+                divHeader.className = 'float-left';
+                divHeader.innerHTML = bettypeGroup.name;
                 header.className = "bettingBox-tote";
                 header.id = "divBettingComm_BettypeGroup_" + sportInfo.id + "_" + bettypeGroup.id;
+
+                header.appendChild(divHeader);
+
                 if (sportInfo.id == Fanex.PTRacing.HR_UKIRISHTOTE_WIN.sportId && Fanex.PTRacing.HR_UKIRISHTOTE_WIN.toteId == bettypeGroup.id) {
                     if (this.context.formId != 4) {
+                        var divBettingCommSportCopy = document.createElement("DIV");
+                        divBettingCommSportCopy.className = 'divBettingCommSportCopy';
+
                         var buttonCopyBettingComm = document.createElement("INPUT");
                         buttonCopyBettingComm.type = "button";
                         buttonCopyBettingComm.title = Language.COPY_ALL_BETTING_LIMIT_FROM.Format(Language.HORSE_RACING_UI_IRISH_TOTE);
@@ -359,6 +393,7 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                             grid.isCopyAll = !grid.isCopyAll;
                             var editStatusButton = document.getElementById('btnEditStatus');
                             editStatusButton.setAttribute('copyStatus', "1");
+
                             var editCommButton = document.getElementById('btnEditComm');
                             editCommButton.setAttribute('copyComm', "1");
 
@@ -384,7 +419,8 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                             Fanex.PTRacing.ToggleBetCommSetting(grid);
                         };
 
-                        header.appendChild(buttonCopyBettingComm);
+                        divBettingCommSportCopy.appendChild(buttonCopyBettingComm);
+                        header.appendChild(divBettingCommSportCopy);
                     }
 
                     bettingCommCopySettingClass = "";
@@ -513,7 +549,6 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                 var enableCheckbox = document.createElement("INPUT");
                 enableCheckbox.type = "checkbox";
                 enableCheckbox.id = 'enable_' + sportInfo.id + '_' + bettypeGroup.id;
-                enableCheckbox.checked = !(item.disable);
                 enableCheckbox.className = bettingCommCopySettingClass + betSettingCopyStatus;
                 enableCheckbox.setAttribute('oldStatus', !(item.disable))
                 if (this.context.formId == 4 || (targetRoleId != 4 && item.disableUplines)) {
@@ -552,13 +587,13 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                     var enableDownlinesCheckbox = document.createElement("INPUT");
                     enableDownlinesCheckbox.type = "checkbox";
                     enableDownlinesCheckbox.id = 'downlines_enable_' + sportInfo.id + '_' + bettypeGroup.id;
-                    enableDownlinesCheckbox.checked = !(item.disableDownlines);
                     enableDownlinesCheckbox.disabled = "disabled";
                     enableDownlinesCheckbox.setAttribute('oldStatus', !(item.disableDownlines))
                     enableDownlinesCheckbox.className = bettingCommCopySettingClass + betSettingCopyStatus;
                     enableDownlinesBox.appendChild(enableDownlinesCheckbox);
                     enableDownlinesBox.className = "bettingBox-downlines";
                     box2.appendChild(enableDownlinesBox);
+                    enableDownlinesCheckbox.checked = !(item.disableDownlines);
                     item.enableDownlinesElement = enableDownlinesCheckbox;
                     if (this.context.formId == 4) {
                         enableDownlinesBox.disabled = "disabled";
@@ -570,14 +605,14 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                     box2.appendChild(enableBox);
                     item.enableElement = enableCheckbox;
                 }
-
+                enableCheckbox.checked = !(item.disable);
                 item.element = box2;
                 bettypeGroupBox.appendChild(box2);
             }
 
             var sportBoxHeight = ((totalBettypeGroups * divHeight) + totalBettypeGroups - 1) + 'px';
             sportHeader.innerHTML = sportInfo.name;
-            sportHeader.title = sportInfo.title;
+            sportHeader.title = sportInfo.name;
             sportHeader.className = "bettingBox-sport";
             sportHeader.style.height = sportBoxHeight;
             sportHeader.style.lineHeight = sportBoxHeight;
@@ -733,12 +768,14 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
             sportBox.appendChild(sportHeader);
 
             var bettypeGroupBox = document.createElement("DIV");
+            var ieMode = this.checkIEModeVersion();
+            bettypeGroupBox.className = (ieMode && ieMode < 7) ? 'float-left' : '';
             for (var j = 0; j < totalBettypeGroups; j++) {
                 var bettypeGroup = bettypeGroups[j];
                 var item = bettypeGroup.bettingCommSetting;
 
                 var box2 = document.createElement("DIV");
-                box2.className = "bettingBox-row";
+                box2.className = "bettingBox-row float-left";
                 if (typeof (item.minBet) == 'undefined') { // For Add new case
                     item.minBet = 0; //item.minBetMax;
                 }
@@ -754,11 +791,13 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                 var betSettingCopyComm = "betSettingCopyComm ";
 
                 var header = document.createElement("DIV");
-                header.innerHTML = bettypeGroup.name;
+                var divHeader = document.createElement("DIV");
+                divHeader.innerHTML = bettypeGroup.name;
                 header.title = bettypeGroup.title;
+                divHeader.className = 'float-left';
                 header.className = "bettingBox-tote";
                 header.id = "divBettingComm_BettypeGroup_" + sportInfo.id + "_" + bettypeGroup.id;
-
+                header.appendChild(divHeader);
                 box2.appendChild(header);
 
                 // min bet                
@@ -808,7 +847,7 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                 var enableCheckbox = document.createElement("INPUT");
                 enableCheckbox.type = "checkbox";
                 enableCheckbox.id = 'enable_' + sportInfo.id + '_' + bettypeGroup.id;
-                enableCheckbox.checked = !(item.disable);
+
                 enableCheckbox.disabled = "disabled";
                 enableCheckbox.className = bettingCommCopySettingClass + betSettingCopyStatus;
                 enableCheckbox.setAttribute('oldStatus', !(item.disable))
@@ -816,6 +855,7 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                 enableBox.appendChild(enableCheckbox);
                 enableBox.className = "bettingBox-status2";
                 box2.appendChild(enableBox);
+                enableCheckbox.checked = !(item.disable);
 
             }
 
@@ -854,5 +894,27 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
         }
 
         return roleName;
+    }
+    this.checkIEModeVersion = function () {
+        engine = null;
+        if (window.navigator.appName == "Microsoft Internet Explorer") {
+            // This is an IE browser. What mode is the engine in?
+            if (document.documentMode) // IE8 or later
+                engine = document.documentMode;
+            else // IE 5-7
+            {
+                engine = 5; // Assume quirks mode unless proven otherwise
+                if (document.compatMode) {
+                    if (document.compatMode == "CSS1Compat")
+                        engine = 7; // standards mode
+                }
+                // There is no test for IE6 standards mode because that mode  
+                // was replaced by IE7 standards mode; there is no emulation.
+            }
+            // the engine variable now contains the document compatibility mode.
+        }
+
+        return engine;
+
     }
 };
