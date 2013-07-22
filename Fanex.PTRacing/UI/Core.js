@@ -235,7 +235,7 @@ if (typeof (Fanex.PTRacing) == 'undefined') { // Define Fanex.PTRacing namespace
                 if (element.childNodes[i].tagName == "INPUT" || element.childNodes[i].tagName == "SELECT") {
                     var previousValue = element.childNodes[i].disabled;
                     if (!isDisabled || !element.childNodes[i].disabled) {
-                        element.childNodes[i].disabled = true;
+                        element.childNodes[i].setAttribute('disabled', 'disabled');
                         element.childNodes[i].setAttribute("previousValue", previousValue);
                     };
                 } else {
@@ -266,8 +266,13 @@ if (typeof (Fanex.PTRacing) == 'undefined') { // Define Fanex.PTRacing namespace
                     if (isDisabled) {
                         var previousValue = element.childNodes[i].getAttribute("previousValue");
                         if (previousValue != null && typeof (previousValue) != 'undefined') {
-                            element.childNodes[i].setAttribute("previousValue", element.childNodes[i].disabled);
-                            element.childNodes[i].disabled = (previousValue == "true");
+                            element.childNodes[i].setAttribute("previousValue", element.childNodes[i].disabled);                            
+                            if (previousValue == "true" || previousValue == true) {
+                                element.childNodes[i].setAttribute('disabled', 'disabled');
+                            }
+                            else {
+                                element.childNodes[i].removeAttribute('disabled');
+                            }
                         }
                     }
                 }
