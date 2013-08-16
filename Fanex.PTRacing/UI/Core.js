@@ -1356,7 +1356,12 @@ var Validators = {
             elementInput.onchange = function () {
                 hint.style.display = 'none';
             };
-            elementInput.focus();
+            //elementInput.focus();
+            if (elementInput.style.visibility == "hidden" || elementInput.style.display == "none" || elementInput.disabled == true) {
+                //do something because it can't accept focus()
+            } else {
+                elementInput.focus();
+            }
         };
         hint.style.display = 'block';
     },
