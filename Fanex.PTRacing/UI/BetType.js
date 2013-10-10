@@ -165,6 +165,7 @@ Fanex.PTRacing.BetType.prototype.Render_0_3_1 = function (owner) { // s3, m3, is
     var s4 = this.pt.s4;
     var n3 = this.pt.n3;
     var m4 = this.pt.m4;
+    var l3 = this.pt.l3;
 
     is3Check.onclick = function (e) {
         // Detect current value is out of range, reset it to max
@@ -178,7 +179,7 @@ Fanex.PTRacing.BetType.prototype.Render_0_3_1 = function (owner) { // s3, m3, is
     // Event change Super Preset PT
     s3Select.select.onchange = function (e, keepCurrent) {
         // Reset m3
-        var max = is3Check.checked ? m4 : Math.min(m4, Fanex.Round(s4 - parseFloat(s3Select.select.value)));
+        var max = is3Check.checked ? l3 : Math.min(l3, Fanex.Round(s4 - parseFloat(s3Select.select.value)));
         var min = n3;
         var selected = parseFloat(m3Select.select.value);
 
