@@ -38,7 +38,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Fanex.Age.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="Fanex.Age.UI.Components, Version=1.0.4673.20102, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Fanex.Age.UI.Components, Version=1.0.4673.20102, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>Dependencies\Fanex.Age.UI.Components.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Sunplus.Agent.Model, Version=1.0.4818.24042, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -56,7 +58,10 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="TplCore, Version=1.0.4694.29951, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="TplCore, Version=1.0.4854.17253, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\TplCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="EditMultiple.css" />

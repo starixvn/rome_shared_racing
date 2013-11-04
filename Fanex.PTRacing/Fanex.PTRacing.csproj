@@ -47,7 +47,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Fanex.Age.UI.Components, Version=1.0.4673.20102, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Fanex.Age.UI.Components, Version=1.0.5051.24050, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\Fanex.Age.UI.Components.dll</HintPath>
+    </Reference>
     <Reference Include="Fanex.Caching">
       <HintPath>..\..\_Lasted Dependencies\Fanex\Release\Fanex.Caching.dll</HintPath>
     </Reference>
@@ -82,7 +85,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="TplCore, Version=1.0.4694.29951, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="TplCore, Version=1.0.4854.17253, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\TplCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Lang.resx">
@@ -99,7 +105,6 @@
     <Content Include="Dependencies\Fanex.Common.dll" />
     <Content Include="Dependencies\Fanex.Data.dll" />
     <Content Include="Dependencies\Fanex.Logging.dll" />
-    <Content Include="Dependencies\Newtonsoft.Json.dll" />
     <Content Include="Dependencies\TplCore.dll" />
     <Content Include="index.html" />
     <EmbeddedResource Include="UI\BetTypeGroup.js" />
