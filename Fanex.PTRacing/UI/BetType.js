@@ -456,17 +456,21 @@ Fanex.PTRacing.BetType.prototype.Render_0_2_1 = function (owner) {
 /*--/master edit agent pt--*/
 
 /*--super edit member pt--*/
-Fanex.PTRacing.BetType.prototype.Render_4_1_1 = function (owner) {   
+Fanex.PTRacing.BetType.prototype.Render_4_1_1 = function (owner) {
     box = document.createElement("DIV");
 
     this.RenderHeader(box);
 
+    var min = this.pt.n4;
+    var max = 0;
+    var selected = null;
+
     // s1
     var s1Select = null;
-    if (!this.pt.is3) {
-        var min = 0;
-        var max = this.pt.l2;
-        var selected = this.pt.s1;
+    if (!this.pt.is3) {        
+        max = Math.max(this.pt.l2, min);
+        selected = this.pt.s1;
+
         s1Select = Fanex.PTRacing.PT_RenderSelect(min, max, Fanex.PTRacing.PT_STEP, selected, this.showButtons);
         s1Select.select.id = s1Select.select.name = "s1$" + this.suffixId;
         s1Select.select.disabled = this.pt.is1;
@@ -493,9 +497,9 @@ Fanex.PTRacing.BetType.prototype.Render_4_1_1 = function (owner) {
     box.appendChild(is1Div);
 
     // us1
-    min = 0;
-    max = this.pt.s4;
+    max = Math.max(this.pt.s4, min);
     selected = this.pt.us1;
+
     var us1Select = document.createElement("select");
     us1Select.className = "PTSelect";
     Fanex.PTRacing.PT_SetSelect(us1Select, min, max, Fanex.PTRacing.PT_STEP, selected);
@@ -556,13 +560,17 @@ Fanex.PTRacing.BetType.prototype.Render_3_1_1 = function (owner) {
     box = document.createElement("DIV");
     this.RenderHeader(box);
 
+    var min = this.pt.n3;
+    var max = 0;
+    var selected = 0;
+
     // m1 selection
     if (Fanex.PTRacing.CURRENT_CONTEXT.ia3) {
         box.className = "PTLineBox";
         if (!this.pt.im2) {
-            var min = this.pt.n3;
-            var max = this.pt.m3;
-            var selected = this.pt.m1;
+            max = Math.max(this.pt.m3, min);
+            selected = this.pt.m1;
+
             var m1Select = Fanex.PTRacing.PT_RenderSelect(min, max, Fanex.PTRacing.PT_STEP, selected, this.showButtons);
             m1Select.select.id = m1Select.select.name = "m1$" + this.suffixId;
             m1Select.className = "BetTypeSelect";
@@ -589,9 +597,9 @@ Fanex.PTRacing.BetType.prototype.Render_3_1_1 = function (owner) {
         box.appendChild(im1Div);
 
         // um1
-        min = 0;
-        max = this.pt.um2;
+        max = Math.max(this.pt.um2, min);
         selected = this.pt.um1;
+
         um1Select = document.createElement("select");
         um1Select.className = "PTSelect";
         Fanex.PTRacing.PT_SetSelect(um1Select, min, max, Fanex.PTRacing.PT_STEP, selected);
@@ -614,9 +622,9 @@ Fanex.PTRacing.BetType.prototype.Render_3_1_1 = function (owner) {
     }
     else {
         box.className = "PTAgentDisableAutMPTBox";
-        var min = this.pt.n3;
-        var max = this.pt.m3;
-        var selected = this.pt.m1;
+        max = this.pt.m3;
+        selected = this.pt.m1;
+
         var m1Select = Fanex.PTRacing.PT_RenderSelect(min, max, Fanex.PTRacing.PT_STEP, selected, this.showButtons);
         m1Select.select.id = m1Select.select.name = "m1$" + this.suffixId;
         m1Select.className = "BetTypeSelect";
