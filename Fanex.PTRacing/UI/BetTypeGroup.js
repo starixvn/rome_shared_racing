@@ -289,7 +289,11 @@ Fanex.PTRacing.BetTypeGroup.prototype.Render_0_2_1 = function (owner) {
     ptBox.appendChild(is1Div);
 
     var bettypeHeader = document.createElement("DIV");
-    bettypeHeader.className = "BetTypeLabel";
+
+    if (Fanex.PTRacing.CURRENT_CONTEXT.ia3) {
+        bettypeHeader.className = "BetTypeLabel";
+    }
+
     is1Div.appendChild(bettypeHeader);
 
     var is1Select = document.createElement("DIV");
