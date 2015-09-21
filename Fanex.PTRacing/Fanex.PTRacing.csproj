@@ -68,6 +68,9 @@
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
       <HintPath>..\..\..\..\Optimus\Dev\Dependencies\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Resources">
+      <HintPath>Dependencies\Resources.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -91,13 +94,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\Lang.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>Lang.designer.cs</LastGenOutput>
-    </Content>
     <Content Include="Dependencies\Fanex.Age.UI.Components.dll" />
     <Content Include="Dependencies\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
     <EmbeddedResource Include="UI\knockout-2.0.0.js" />
+    <Content Include="Dependencies\Resources.dll" />
     <Content Include="PTEngine\PTRacingGrid.xml" />
     <Content Include="PTEngine\PTRacingGrid.xslt" />
     <Content Include="PTEngine\StoreProcedureName.xml" />
@@ -138,11 +138,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_GlobalResources\Lang.designer.cs">
-      <DependentUpon>Lang.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <Compile Include="BusinessObjects\BettingCommSettings.cs" />
     <Compile Include="BusinessObjects\IBettingCommSetting.cs" />
     <Compile Include="Extension\HttpContextExtension.cs" />
