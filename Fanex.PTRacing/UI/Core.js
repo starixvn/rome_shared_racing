@@ -1198,6 +1198,9 @@ if (typeof (Fanex.PTRacing) == 'undefined') { // Define Fanex.PTRacing namespace
             var copyAllInput = document.getElementById("btnCopyBettingComm");
             var isCopyAll = (copyAllInput.getAttribute('copyBettingComm') == "1");
 
+            var copyBetSettingAllInput = document.getElementById("btnEditBetSetting");
+            var isBetSettingAll = (copyBetSettingAllInput.getAttribute('copyBetSetting') == "1");
+
             var commEditAllInput = document.getElementById("btnEditComm");
             var isCommEditAll = (commEditAllInput.getAttribute('copycomm') == "1");
 
@@ -1215,17 +1218,20 @@ if (typeof (Fanex.PTRacing) == 'undefined') { // Define Fanex.PTRacing namespace
                         var minbetElement = document.getElementById("minbet_" + sportType.id + "_" + tote.id).parentNode;
                         var maxbetElement = document.getElementById("maxbet_" + sportType.id + "_" + tote.id).parentNode;
                         var maxpermatchElement = document.getElementById("maxpermatch_" + sportType.id + "_" + tote.id).parentNode;
-                        if (isCopyAll) {
-                            if (i == 0 && j == 0) {
-                                Fanex.PTRacing.EnableChildren(minbetElement);
-                                Fanex.PTRacing.EnableChildren(maxbetElement);
-                                Fanex.PTRacing.EnableChildren(maxpermatchElement);
-                            }
-                            else {
-                                Fanex.PTRacing.DisableChildren(minbetElement);
-                                Fanex.PTRacing.DisableChildren(maxbetElement);
-                                Fanex.PTRacing.DisableChildren(maxpermatchElement);
-                            }
+                        if (isCopyAll && isBetSettingAll && (i != 0 || j != 0)) {
+                            //if (i == 0 && j == 0) {
+                            //    Fanex.PTRacing.EnableChildren(minbetElement);
+                            //    Fanex.PTRacing.EnableChildren(maxbetElement);
+                            //    Fanex.PTRacing.EnableChildren(maxpermatchElement);
+                            //}
+                            //else {
+                            //    Fanex.PTRacing.DisableChildren(minbetElement);
+                            //    Fanex.PTRacing.DisableChildren(maxbetElement);
+                            //    Fanex.PTRacing.DisableChildren(maxpermatchElement);
+                            //}
+                            Fanex.PTRacing.DisableChildren(minbetElement);
+                            Fanex.PTRacing.DisableChildren(maxbetElement);
+                            Fanex.PTRacing.DisableChildren(maxpermatchElement);
                         }
                         else {
                             Fanex.PTRacing.EnableChildren(minbetElement);
