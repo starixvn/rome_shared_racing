@@ -61,7 +61,7 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                 var maxBetMax = item.maxBetMax;
                 var maxPerMatchMax = item.maxPerMatchMax;
 
-                if (this.isCopyAll) {
+                if (this.isCopyAll && document.getElementById('btnEditBetSetting').getAttribute('copybetsetting') == '1') {
                     minBet = parseFloat(this.items[0].betTypeGroups[0].bettingCommSetting.minBetElement.value, true);
                     maxBet = parseFloat(this.items[0].betTypeGroups[0].bettingCommSetting.maxBetElement.value, true);
                     maxPerMatch = parseFloat(this.items[0].betTypeGroups[0].bettingCommSetting.maxPerMatchElement.value, true);

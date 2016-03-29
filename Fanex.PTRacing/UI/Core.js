@@ -601,8 +601,19 @@ if (typeof (Fanex.PTRacing) == 'undefined') { // Define Fanex.PTRacing namespace
                             var discount = Fanex.RoundNumber(parseFloat(grid.sportTypes[0].betTypeGroups[0].bettingCommSetting.discountElement.value, true), 5);
                             var disable = !(grid.sportTypes[0].betTypeGroups[0].bettingCommSetting.enableElement.checked);
                             var disableDownlines = null;
+                            var minBet = Fanex.RoundNumber(parseFloat(grid.sportTypes[0].betTypeGroups[0].bettingCommSetting.minBetElement.value, true), 1);
+                            var maxBet = Fanex.RoundNumber(parseFloat(grid.sportTypes[0].betTypeGroups[0].bettingCommSetting.maxBetElement.value, true), 1);
+                            var maxPerMatch = Fanex.RoundNumber(parseFloat(grid.sportTypes[0].betTypeGroups[0].bettingCommSetting.maxPerMatchElement.value, true), 1);
+
                             if (this.context.targetRoleId != 1) {
                                 disableDownlines = !(grid.sportTypes[0].betTypeGroups[0].bettingCommSetting.enableDownlinesElement.checked);
+                            }
+
+                            if (document.getElementById('btnEditBetSetting').getAttribute('copybetsetting') != '1')
+                            {
+                                var minBet = Fanex.RoundNumber(parseFloat(document.getElementById('minbet_' + this.items[0].sportId + '_' + this.items[0].id).value, true), 1);
+                                var maxBet = Fanex.RoundNumber(parseFloat(document.getElementById('maxbet_' + this.items[0].sportId + '_' + this.items[0].id).value, true), 1);
+                                var maxPerMatch = Fanex.RoundNumber(parseFloat(document.getElementById('maxpermatch_' + this.items[0].sportId + '_' + this.items[0].id).value, true), 1);
                             }
 
                             if (document.getElementById('btnEditComm').getAttribute('copyComm') != '1') {
@@ -623,9 +634,9 @@ if (typeof (Fanex.PTRacing) == 'undefined') { // Define Fanex.PTRacing namespace
                                 }
                             }
                             bettingCommSetting = {
-                                MinBet: Fanex.RoundNumber(parseFloat(grid.sportTypes[0].betTypeGroups[0].bettingCommSetting.minBetElement.value, true), 1),
-                                MaxBet: Fanex.RoundNumber(parseFloat(grid.sportTypes[0].betTypeGroups[0].bettingCommSetting.maxBetElement.value, true), 1),
-                                MaxPerMatch: Fanex.RoundNumber(parseFloat(grid.sportTypes[0].betTypeGroups[0].bettingCommSetting.maxPerMatchElement.value, true), 1),
+                                MinBet: minBet,
+                                MaxBet: maxBet,
+                                MaxPerMatch: maxPerMatch,
                                 Discount: discount,
                                 Disable: disable,
                                 DisableDownlines: disableDownlines,
