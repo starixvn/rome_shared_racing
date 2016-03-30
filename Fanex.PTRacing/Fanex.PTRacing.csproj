@@ -28,6 +28,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -91,10 +92,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\Lang.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
+    <EmbeddedResource Include="Resources\Lang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Lang.designer.cs</LastGenOutput>
-    </Content>
+    </EmbeddedResource>
     <Content Include="Dependencies\Fanex.Age.UI.Components.dll" />
     <Content Include="Dependencies\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
     <EmbeddedResource Include="UI\knockout-2.0.0.js" />
@@ -138,7 +139,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_GlobalResources\Lang.designer.cs">
+    <Compile Include="Resources\Lang.designer.cs">
       <DependentUpon>Lang.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -178,7 +179,9 @@
     <Compile Include="XmlMapping\PTRacingMappingSection.cs" />
     <Compile Include="XmlMapping\RacingBettingCommSettingMappingSection.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_GlobalResources\" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
