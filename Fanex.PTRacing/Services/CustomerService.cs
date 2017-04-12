@@ -11,12 +11,19 @@ namespace Fanex.PTRacing.Services
     using System.Reflection;
     using Fanex.PTRacing.BusinessObjects;
     using Fanex.PTRacing.DataAccess;
-
+    using System.Configuration;
     /// <summary>
     /// Do action on Customer Setting
     /// </summary>
     public class CustomerService : ICustomerService
     {
+        private readonly byte _systemId;
+
+        public CustomerService(byte systemId = 1)
+        {
+            _systemId = systemId;
+        }
+
         #region ICustomerService Members
 
         /// <summary>
@@ -127,6 +134,7 @@ namespace Fanex.PTRacing.Services
                 parameters.Add("subaccid", context.SubAccId);
                 parameters.Add("language", context.Language);
                 parameters.Add("ip", context.IP);
+                parameters.Add("systemid", _systemId);
 
                 if (parameters.Contains("ischanged") && ((bool)parameters["ischanged"]))
                     result = customerDataAccess.Acc_CustomerUpdSuperHR_All(parameters);
@@ -151,6 +159,7 @@ namespace Fanex.PTRacing.Services
                 parameters.Add("subaccid", context.SubAccId);
                 parameters.Add("language", context.Language);
                 parameters.Add("ip", context.IP);
+                parameters.Add("systemid", _systemId);
 
                 if (otherSettings != null && otherSettings.Contains("isupdateallmembers"))
                 {
@@ -180,6 +189,7 @@ namespace Fanex.PTRacing.Services
                 parameters.Add("subaccid", context.SubAccId);
                 parameters.Add("language", context.Language);
                 parameters.Add("ip", context.IP);
+                parameters.Add("systemid", _systemId);
 
                 if (otherSettings != null  &&otherSettings.Contains("isupdateallmembers"))
                 {
@@ -209,6 +219,7 @@ namespace Fanex.PTRacing.Services
                 parameters.Add("subaccid", context.SubAccId);
                 parameters.Add("language", context.Language);
                 parameters.Add("ip", context.IP);
+                parameters.Add("systemid", _systemId);
 
                 if (parameters.Contains("ischanged") && ((bool)parameters["ischanged"]))
                     result = customerDataAccess.Acc_CustomerUpdMemberHR_All(parameters);
@@ -232,6 +243,7 @@ namespace Fanex.PTRacing.Services
                 parameters.Add("subaccid", context.SubAccId);
                 parameters.Add("language", context.Language);
                 parameters.Add("ip", context.IP);
+                parameters.Add("systemid", _systemId);
 
                 if (parameters.Contains("ischanged") && ((bool)parameters["ischanged"]))
                     result = customerDataAccess.Acc_CustomerUpdMemberHR_SAg(parameters);
@@ -256,6 +268,7 @@ namespace Fanex.PTRacing.Services
                 parameters.Add("subaccid", context.SubAccId);
                 parameters.Add("language", context.Language);
                 parameters.Add("ip", context.IP);
+                parameters.Add("systemid", _systemId);
 
                 if (parameters.Contains("ischanged") && ((bool)parameters["ischanged"]))
                     result = customerDataAccess.Acc_CustomerUpdMemberHR_MAg(parameters);

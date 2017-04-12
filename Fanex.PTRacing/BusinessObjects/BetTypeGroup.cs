@@ -179,7 +179,7 @@
                 if (compareBettingCommSetting.Count > 0)
                 {
                     #region disable
-                    if (compareBettingCommSetting.Contains(string.Format("disable", sportTypeId, this.Id)))
+                    if (compareBettingCommSetting.Contains("disable") || compareBettingCommSetting.Contains("disabledownlines"))
                     {
                         isUpdateStatus = true;
                         isChanged = true;
