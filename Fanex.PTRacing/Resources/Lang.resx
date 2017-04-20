@@ -3758,4 +3758,7 @@ Now, gross commission = (your commission percentage) * turnover (excluding Draw 
   <data name="saveStatus" xml:space="preserve">
     <value>Save Status</value>
   </data>
+  <data name="ProductStatusWarningMessage" xml:space="preserve">
+    <value>You are not allowed to disable downlines as a company policy.</value>
+  </data>
 </root>

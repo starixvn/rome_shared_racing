@@ -586,29 +586,21 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                 enableCheckbox.id = 'enable_' + sportInfo.id + '_' + bettypeGroup.id;
                 enableCheckbox.className = bettingCommCopySettingClass + betSettingCopyStatus;
                 enableCheckbox.setAttribute('oldStatus', !(item.disable))
-                if (this.context.formId == 4 || (targetRoleId != 4 && item.disableUplines)) {
+                if (this.context.formId == 4 || (targetRoleId != 4 && item.disableUplines) || (targetRoleId != 4 && targetRoleId != 1 && !item.disable)) {
                     enableCheckbox.disabled = "disabled";
                 }
                 if (targetRoleId > 1) {
                     if (this.context.formId != 4) {
                         enableCheckbox.onclick = function () {
                             var currentStatus = this.checked;
-                            var oldStatus = this.getAttribute("oldStatus") == "true" ? true : false;
                             var downline = document.getElementById('downlines_' + this.id);
-                            var downlineOldStatus = downline.getAttribute('oldStatus') == "true" ? true : false;
 
-                            if (currentStatus != oldStatus) {
-                                if (currentStatus) {
-                                    downline.removeAttribute('disabled');
-                                }
-                                else {
-                                    downline.setAttribute('disabled', 'disabled');
-                                    downline.checked = false;
-                                }
+                            if (currentStatus) {
+                                downline.removeAttribute('disabled');
                             }
                             else {
                                 downline.setAttribute('disabled', 'disabled');
-                                downline.checked = downlineOldStatus;
+                                downline.checked = false;
                             }
                         }
                     }
@@ -622,7 +614,9 @@ Fanex.PTRacing.BettingCommSetting = function (source) {
                     var enableDownlinesCheckbox = document.createElement("INPUT");
                     enableDownlinesCheckbox.type = "checkbox";
                     enableDownlinesCheckbox.id = 'downlines_enable_' + sportInfo.id + '_' + bettypeGroup.id;
-                    enableDownlinesCheckbox.disabled = "disabled";
+                    if (item.disable || (targetRoleId != 1 && !item.disableDownlines)) {
+                        enableDownlinesCheckbox.disabled = "disabled";
+                    }
                     enableDownlinesCheckbox.setAttribute('oldStatus', !(item.disableDownlines))
                     enableDownlinesCheckbox.className = bettingCommCopySettingClass + betSettingCopyStatus;
                     enableDownlinesBox.appendChild(enableDownlinesCheckbox);

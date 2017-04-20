@@ -6,114 +6,137 @@ using System.Text;
 using TplCore;
 using TplCore.Element;
 #pragma warning disable
-namespace Fanex.PTRacing
+namespace Fanex.PTRacing.Templates
 {
-	using Templates;
-	namespace Templates
-	{
-		public class EditMultiple_Template : Template
-		{
-			protected static string s0 = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>";
-			public string Title = "{Title}";
-			protected static string s1 = "</title><link href='";
-			protected static string s2{get{return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.Core.css");}}
-			protected static string s3 = "'rel=\"stylesheet\" type=\"text/css\" /><script src='";
-			protected static string s4{get{return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.Languages.en.js");}}
-			protected static string s5 = "'type=\"text/javascript\"></script><script src='";
-			protected static string s6{get{return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.Core.js");}}
-			protected static string s7 = "'type=\"text/javascript\"></script><script src='";
-			protected static string s8{get{return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.BettingCommSetting.js");}}
-			protected static string s9 = "'type=\"text/javascript\"></script><script src='";
-			protected static string s10{get{return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.BetTypeGroup.js");}}
-			protected static string s11 = "'type=\"text/javascript\"></script><script src='";
-			protected static string s12{get{return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.BetType.js");}}
-			protected static string s13 = "'type=\"text/javascript\"></script><script src='";
-			protected static string s14{get{return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.knockout-2.0.0.js");}}
-			protected static string s15 = "'type=\"text/javascript\"></script><script src='";
-			public string dataSource = "{dataSource}";
-			protected static string s16 = "?targetCustId=";
-			public string targetCustId = "{targetCustId}";
-			protected static string s17 = "&targetRoleId=";
-			public string targetRoleId = "{targetRoleId}";
-			protected static string s18 = "'type=\"text/javascript\"></script>";
-			public EditMultiple_CssBlock_Block CssBlock = new EditMultiple_CssBlock_Block();
-			protected static string s19 = "</head><body><div class=\"minWidthCustomer\">";
-			protected static string s20{get{return new Fanex.Age.UI.Components.ErrorMsg.ErrorMsg_Template();}}
-			protected static string s21 = "<div class=\"pt7\"><div class=\"btnLeft\"><button data-bind='click: saveCustomer' accountpermisssion=\"[B]\" class=\"btnMain\"id='btnSubmit'>";
-			protected static string s22{get{return Resources.Lang.submit;}}
-			protected static string s23 = "</button></div></div><div class=\"customerInfo\"><div class=\"customerInfoBlock6\"><span data-bind=\"text: customer.userNames\"></span></div></div><div class=\"clearBlock\"></div><div id=\"bettingLimitContainer\"></div><div class=\"clearBlock\"></div><div id=\"ptheader\" class=\"headerPositionTaking\">";
-			protected static string s24{get{return Resources.Lang.positiontaking;}}
-			protected static string s25 = "</div><div class=\"positionTaking\"><div id=\"ptGridContainer\"></div></div><div class=\"clearBlock\"></div><div class=\"btnLeft\"><button data-bind='click: saveCustomer' accountpermisssion=\"[B]\" class=\"btnMain\"id='btnMain'>";
-			protected static string s26{get{return Resources.Lang.submit;}}
-			protected static string s27 = "</button></div></div>";
-			public EditMultiple_ScriptBlock_Block ScriptBlock = new EditMultiple_ScriptBlock_Block();
-			protected static string s28 = "</body></html>";
-			public override void ToString(ref StringBuilder bd)
-			{
-				if(!Visible) return;
-				bd.Append(s0);
-				bd.Append(Title);
-				bd.Append(s1);
-				bd.Append(s2);
-				bd.Append(s3);
-				bd.Append(s4);
-				bd.Append(s5);
-				bd.Append(s6);
-				bd.Append(s7);
-				bd.Append(s8);
-				bd.Append(s9);
-				bd.Append(s10);
-				bd.Append(s11);
-				bd.Append(s12);
-				bd.Append(s13);
-				bd.Append(s14);
-				bd.Append(s15);
-				bd.Append(dataSource);
-				bd.Append(s16);
-				bd.Append(targetCustId);
-				bd.Append(s17);
-				bd.Append(targetRoleId);
-				bd.Append(s18);
-				if(null != CssBlock) CssBlock.ToString(ref bd);
-				bd.Append(s19);
-				bd.Append(s20);
-				bd.Append(s21);
-				bd.Append(s22);
-				bd.Append(s23);
-				bd.Append(s24);
-				bd.Append(s25);
-				bd.Append(s26);
-				bd.Append(s27);
-				if(null != ScriptBlock) ScriptBlock.ToString(ref bd);
-				bd.Append(s28);
-				bd.Append(Value);
-			}
-			public string ToString()
-			{
-				StringBuilder bd = new StringBuilder();
-				ToString(ref bd);
-				return bd.ToString();
-			}
+    //{
+    public class EditMultiple_Template : Template
+    {
+        protected static string s0 = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>";
+        public string Title = "{Title}";
+        protected static string s1 = "</title><link href='";
+        protected static string s2 { get { return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.Core.css"); } }
+        protected static string s3 = "'rel=\"stylesheet\" type=\"text/css\" /><script src='";
+        protected static string s4 { get { return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.Languages.en.js"); } }
+        protected static string s5 = "'type=\"text/javascript\"></script><script src='";
+        protected static string s6 { get { return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.Core.js"); } }
+        protected static string s7 = "'type=\"text/javascript\"></script><script src='";
+        protected static string s8 { get { return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.BettingCommSetting.js"); } }
+        protected static string s9 = "'type=\"text/javascript\"></script><script src='";
+        protected static string s10 { get { return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.BetTypeGroup.js"); } }
+        protected static string s11 = "'type=\"text/javascript\"></script><script src='";
+        protected static string s12 { get { return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.BetType.js"); } }
+        protected static string s13 = "'type=\"text/javascript\"></script><script src='";
+        protected static string s14 { get { return HttpContext.Current.GetWebResourceUrl("Fanex.PTRacing.UI.knockout-2.0.0.js"); } }
+        protected static string s15 = "'type=\"text/javascript\"></script><script src='";
+        public string dataSource = "{dataSource}";
+        protected static string s16 = "?targetCustId=";
+        public string targetCustId = "{targetCustId}";
+        protected static string s17 = "&targetRoleId=";
+        public string targetRoleId = "{targetRoleId}";
+        protected static string s18 = "'type=\"text/javascript\"></script>";
+        public EditMultiple_CssBlock_Block CssBlock = new EditMultiple_CssBlock_Block();
+        protected static string s19 = "</head><body><div class=\"minWidthCustomer\">";
+        protected static string s20 { get { return new Fanex.Age.UI.Components.ErrorMsg.ErrorMsg_Template(); } }
+        protected static string s21 = "<div class=\"pt7\"><div class=\"btnLeft\"><button data-bind='click: saveCustomer' accountpermisssion=\"[B]\" class=\"btnMain\"id='btnSubmit'>";
+        protected static string s22 { get { return Resources.Lang.submit; } }
+        protected static string s23 = "</button></div></div>";
+        public EditMultiple_ProductStatusWarning_Block ProductStatusWarning = new EditMultiple_ProductStatusWarning_Block();
+        protected static string s24 = "<div class=\"customerInfo\"><div class=\"customerInfoBlock6\"><span data-bind=\"text: customer.userNames\"></span></div></div><div class=\"clearBlock\"></div><div id=\"bettingLimitContainer\"></div><div class=\"clearBlock\"></div><div id=\"ptheader\" class=\"headerPositionTaking\">";
+        protected static string s25 { get { return Resources.Lang.positiontaking; } }
+        protected static string s26 = "</div><div class=\"positionTaking\"><div id=\"ptGridContainer\"></div></div><div class=\"clearBlock\"></div><div class=\"btnLeft\"><button data-bind='click: saveCustomer' accountpermisssion=\"[B]\" class=\"btnMain\"id='btnMain'>";
+        protected static string s27 { get { return Resources.Lang.submit; } }
+        protected static string s28 = "</button></div></div>";
+        public EditMultiple_ScriptBlock_Block ScriptBlock = new EditMultiple_ScriptBlock_Block();
+        protected static string s29 = "</body></html>";
+        public override void ToString(ref StringBuilder bd)
+        {
+            if (!Visible) return;
+            if (RenderChild)
+            {
+                bd.Append(s0);
+                bd.Append(Title);
+                bd.Append(s1);
+                bd.Append(s2);
+                bd.Append(s3);
+                bd.Append(s4);
+                bd.Append(s5);
+                bd.Append(s6);
+                bd.Append(s7);
+                bd.Append(s8);
+                bd.Append(s9);
+                bd.Append(s10);
+                bd.Append(s11);
+                bd.Append(s12);
+                bd.Append(s13);
+                bd.Append(s14);
+                bd.Append(s15);
+                bd.Append(dataSource);
+                bd.Append(s16);
+                bd.Append(targetCustId);
+                bd.Append(s17);
+                bd.Append(targetRoleId);
+                bd.Append(s18);
+                if (null != CssBlock) CssBlock.ToString(ref bd);
+                bd.Append(s19);
+                bd.Append(s20);
+                bd.Append(s21);
+                bd.Append(s22);
+                bd.Append(s23);
+                if (null != ProductStatusWarning) ProductStatusWarning.ToString(ref bd);
+                bd.Append(s24);
+                bd.Append(s25);
+                bd.Append(s26);
+                bd.Append(s27);
+                bd.Append(s28);
+                if (null != ScriptBlock) ScriptBlock.ToString(ref bd);
+                bd.Append(s29);
+            }
+            if (IsAssigned) { bd.Append(Value); }
+        }
+        public string ToString()
+        {
+            StringBuilder bd = new StringBuilder();
+            ToString(ref bd);
+            return bd.ToString();
+        }
 
-		}
+    }
 
-		public class EditMultiple_CssBlock_Block: Block
-		{
-			public override void ToString(ref StringBuilder bd)
-			{
-				if(IsAssigned){bd.Append(Value);}
-			}
-		}
+    public class EditMultiple_CssBlock_Block : Block
+    {
+        public override void ToString(ref StringBuilder bd)
+        {
+            if (IsAssigned) { bd.Append(Value); }
+        }
+    }
 
-		public class EditMultiple_ScriptBlock_Block: Block
-		{
-			public override void ToString(ref StringBuilder bd)
-			{
-				if(IsAssigned){bd.Append(Value);}
-			}
-		}
+    public class EditMultiple_ProductStatusWarning_Block : Block
+    {
+        protected static string s30 = "<div class=\"statusWarningMsg Enrich container\"><div class=\"EnrichWarmsg\">";
+        protected static string s31 { get { return Resources.Lang.ProductStatusWarningMessage; } }
+        protected static string s32 = "</div></div>";
+        public override void ToString(ref StringBuilder bd)
+        {
+            if (!Visible) return;
+            if (RenderChild)
+            {
+                bd.Append(s30);
+                bd.Append(s31);
+                bd.Append(s32);
+            }
+            if (IsAssigned) { bd.Append(Value); }
+        }
+    }
 
-	}
+    public class EditMultiple_ScriptBlock_Block : Block
+    {
+        public override void ToString(ref StringBuilder bd)
+        {
+            if (IsAssigned) { bd.Append(Value); }
+        }
+    }
+
+    //}
 }
 #pragma warning enable
 #endregion
